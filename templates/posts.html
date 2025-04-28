@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Список записів</title>
+</head>
+<body>
+    <h1>Записи блогу</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Назва</th>
+            <th>Деталі</th>
+        </tr>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+            <td><a href="/posts/{{ post.id }}">Переглянути</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Назад на головну</a>
+</body>
+</html>
